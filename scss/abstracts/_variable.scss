@@ -1,0 +1,417 @@
+
+// Color system
+$bg-fafa: #fafafa !default;
+$bg-f9f9: #f9f9f9 !default;
+$bg-f5f5: #f5f5f5 !default;
+$bg-f2f2: #f2f2f2 !default;
+// scss-docs-end gray-color-variables
+
+// fusv-disable
+// scss-docs-start gray-colors-map
+$bg: ("100": $bg-fafa,
+    "200": $bg-f9f9,
+    "300": $bg-f5f5,
+    "400": $bg-f2f2,
+) !default;
+
+// scss-docs-start gray-color-variables
+$white: #fff !default;
+$gray-eee: #eeeeee !default;
+$gray-dbdb: #dbdbdb !default;
+$gray-bbb: #bbbbbb !default;
+$gray-999: #999999 !default;
+$gray-7575: #757575 !default;
+$gray-555: #555555 !default;
+$gray-4545: #454545 !default;
+$gray-333: #333333 !default;
+$gray-2525: #252525 !default;
+$black: #000 !default;
+// scss-docs-end gray-color-variables
+
+// fusv-disable
+// scss-docs-start gray-colors-map
+$grays: ("100": $gray-eee,
+    "200": $gray-dbdb,
+    "300": $gray-bbb,
+    "400": $gray-999,
+    "500": $gray-7575,
+    "600": $gray-555,
+    "700": $gray-4545,
+    "800": $gray-333,
+    "900": $gray-2525) !default;
+// scss-docs-end gray-colors-map
+// fusv-enable
+
+$enable-grid-classes:         true !default;
+ 
+// scss-docs-start color-variables
+$point: #382dd1 !default;
+$point2: #3f1bd1 !default;
+$point3: #6058d5 !default;
+$point4: #6a5fe1 !default;
+$point5: #525dc2 !default;
+$boxInBg: #3c22cc !default;
+$sky: #aadeff !default;
+$box-bg-color-sky1: #c0e1ee !default;
+$box-bg-color-purple1: #bbbdee !default;
+$box-bg-color-purple1: #d1bbee !default;
+$box-bg-color-sky2: #c2dbfd !default;
+// scss-docs-end color-variables
+
+
+// scss-docs-start colors-map
+$colors: ("point": $point,
+    "point2": $point2,
+    "point3": $point3,
+    "point4": $point4,
+    "point5": $point5,
+    "box-bg-color1": $box-bg-color-sky1,
+    "box-bg-color2": $box-bg-color-purple1,
+    "box-bg-color3": $box-bg-color-purple1,
+    "box-bg-color4": $box-bg-color-sky2,
+    "white": $white,
+    "gray": $gray-4545,
+    "gray-dark": $gray-2525) !default;
+// scss-docs-end colors-map
+
+$variable-prefix: bs- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
+$prefix: $variable-prefix !default;
+
+// scss-docs-start font-variables
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: 'Noto Sans KR',
+sans-serif !default;
+$font-family-point: 'yg-jalnan',
+sans-serif !default;
+// stylelint-enable value-keyword-case
+$font-family-base: var(--#{$prefix}font-sans-serif) !default;
+$font-family-code: var(--#{$prefix}font-point) !default;
+
+// $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
+// $font-size-base affects the font size of the body text
+$font-size-root: null !default;
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-sm: $font-size-base * .875 !default;
+$font-size-lg: $font-size-base * 1.25 !default;
+
+
+
+$fw-lighter: lighter !default;
+$fw-light: 300 !default;
+$fw-normal: 400 !default;
+$fw-medium: 500 !default;
+$fw-semibold: 600 !default;
+$fw-bold: 700 !default;
+$fw-bolder: bolder !default;
+
+$fw-base: $fw-normal !default;
+
+$line-height-base: 1.5 !default;
+$line-height-sm: 1.25 !default;
+$line-height-lg: 2 !default;
+
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+// scss-docs-end font-variables
+
+// scss-docs-start font-sizes
+$font-sizes: (1: $h1-font-size,
+    2: $h2-font-size,
+    3: $h3-font-size,
+    4: $h4-font-size,
+    5: $h5-font-size,
+    6: $h6-font-size) !default;
+// scss-docs-end font-sizes
+
+
+
+$variable-prefix: bs- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
+$prefix: $variable-prefix !default;
+
+
+
+
+
+// scss-docs-start box-shadow-variables
+$box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
+$box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
+$box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
+$box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
+// scss-docs-end box-shadow-variables
+
+// scss-docs-start spacer-variables-maps
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+) !default;
+
+$position-values: (
+  0: 0,
+  50: 50%,
+  100: 100%
+) !default;
+
+
+$body-bg: $white !default;
+$body-color: $gray-2525 !default;
+$body-text-align: null !default;
+$border-color: $gray-dbdb !default;
+
+$tablet: 1024px;
+$mobile: 851px;
+$basic-font: 'Noto Sans KR',
+sans-serif;
+$point-font: 'yg-jalnan',
+sans-serif;
+
+
+$c-bs: #252525;
+$c-bl1: #252525;
+$c-bl2: #454545;
+$c-g1: #757575;
+$c-w: #fff;
+$c-g2: #999;
+$c-g3: #bbb;
+$c-g4: #aaa;
+$l-bb: #bbb;
+$l-dd: #ddd;
+$l-db: #dbdbdb;
+$l-ee: #eee;
+$bg-color-gray2: #f9f9f9;
+$bg-color-gray: #f6f6f6;
+$chk-w1: 20px;
+$chk-w2: 20px;
+$rdo-w1: 16px;
+$rdo-in-w1: 9.6px;
+$c-dis: #ed413f;
+$c-danger: #f50000;
+$bg-color1: #191919;
+$text-color: #a8a8a8;
+$c-red: #ed5669;
+$c-orange: #ff8a00;
+$c-blue: #3762ff;
+$c-green: #2ace92;
+$c-purple: #8f65fc;
+$list-mg-20: 20px;
+$list-mg: 10px;
+$mg-10: 10px;
+$kakao-bg: #f9e000;
+$kakao-text: #381e1f;
+
+
+$border-radius1-pc: 1.5rem !default;
+$border-radius1-mo: .375rem !default;
+
+%radius {
+    border-radius: $border-radius1-pc;
+}
+
+
+$grid-columns:                12 !default;
+$grid-gutter-width:           1.5rem !default;
+$grid-row-columns:            6 !default;
+
+
+$gutters: $spacers !default;
+
+
+// font-size
+$html-font-size-pc: 20px;
+$html-font-size-mo: 14px;
+
+// main visual text
+$ttl-big-pc: 84px;
+$ttl-big-mo: 35px;
+
+$ttl-big-bot-pc: 20px;
+$ttl-big-bot-mo: 14px;
+
+
+$box-text-pc: 22px;
+$box-text-mo: 31px;
+
+
+// ttl 공통
+$ttl-pc: 60px;
+$ttl-mo: 30px;
+
+$ttl-top-pc: 22px;
+$ttl-top-mo: 13px;
+
+$ttl-bot-pc: 19px;
+$ttl-bot-mo: 22px;
+
+// ttl 작은
+$ttl-small-pc: 26px;
+$ttl-small-mo: 14px;
+// $txt-pc: 20px;
+// $txt-mo: 14px;
+
+// $txt2-pc: 19px;
+// $txt2-mo: 14px;
+
+$text-btn-pc: 20px;
+$text-btn-mo: 14px;
+
+// $txt-big-pc: 24px;
+// $txt-big-mo: 24px;
+
+$gnb-txt-pc: 19px;
+$gnb-txt-mo: 14px;
+
+$cont-ttl-pc: 24px;
+$cont-ttl-mo: 14px;
+
+
+$footer-font-size-pc: 14px;
+$footer-font-size-mo: 14px;
+
+
+
+%basic-txt {
+    font-size: $html-font-size-pc;
+}
+
+%ttl-big {
+    font-size: $ttl-big-pc;
+}
+
+%ttl-small {
+    font-size: $ttl-small-pc;
+}
+
+%ttl-big-bot {
+    font-size: $ttl-big-bot-pc;
+}
+
+
+%ttl {
+    font-size: $ttl-pc;
+}
+
+%box-text {
+    font-size: $box-text-pc;
+}
+
+%ttl-top {
+    font-size: $ttl-top-pc;
+}
+
+%ttl-bot,
+%ttl-box-num {
+    font-size: $ttl-bot-pc;
+}
+
+
+
+%gnb-txt {
+    font-size: $gnb-txt-pc;
+}
+
+%cont-ttl {
+    font-size: $cont-ttl-pc;
+}
+
+%footer-txt {
+    font-size: $footer-font-size-pc;
+}
+
+
+%button{
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    max-width: 240px;
+    border-radius: 30px;
+    background-color: $point;
+    height: 60px;
+    line-height: 60px;
+    color: $white;
+    text-align: center;
+    box-shadow: 0 0.6875rem 1.2rem rgba($color: $point, $alpha: 0.25);
+    font-weight: 600 ;
+  }
+  
+
+
+
+@mixin desktop {
+    @media (min-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$mobile}) and (max-width: #{$tablet - 1px}) {
+      
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: #{$mobile - 1px}) {
+      
+        @content;
+    }
+}
+
+
+@include mobile{
+    
+%basic-txt {
+    font-size: $html-font-size-mo;
+}
+
+%ttl-big {
+    font-size: $ttl-big-mo;
+}
+
+%ttl-big-bot {
+    font-size: $ttl-big-bot-mo;
+}
+
+
+%ttl-small {
+    font-size: $ttl-small-mo;
+}
+
+
+%ttl {
+    font-size: $ttl-mo;
+}
+
+%box-text {
+    font-size: $box-text-mo;
+}
+
+%ttl-top {
+    font-size: $ttl-top-mo;
+}
+
+%ttl-bot,
+%ttl-box-num {
+    font-size: $ttl-bot-mo;
+}
+
+
+%gnb-txt {
+    font-size: $gnb-txt-mo;
+}
+
+%cont-ttl {
+    font-size: $cont-ttl-mo;
+}
+
+%footer-txt {
+    font-size: $footer-font-size-mo;
+}
+}

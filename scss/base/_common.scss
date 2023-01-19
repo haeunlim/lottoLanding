@@ -1,0 +1,135 @@
+#wrap {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.only {
+    &_web {
+        display: block !important;
+
+    }
+
+    &_mo {
+        display: none !important;
+
+    }
+}
+
+[class^="inner"] {
+    max-width: 1250px;
+    position: relative;
+    margin: 0 auto;
+    width: calc(100% - 2.14285rem);
+
+
+}
+
+.inner_1305 {
+    max-width: 1305px;
+}
+.inner_1200 {
+    max-width: 1200px;
+}
+
+// common 
+
+
+
+// live_commerce 
+
+.item_list {
+    @include flexVal(flex, center, center, wrap);
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    margin-top: -40px;
+
+    li {
+        width: calc(25% - 20px);
+        margin: 40px 10px 0 10px;
+
+        figure {
+            overflow: hidden;
+            border-radius: 5px;
+
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .info_box {
+            margin-top: 20px;
+            font-size: 15px;
+
+            .com_name {
+                color: #999999;
+                margin-bottom: 12px;
+            }
+
+            .subj {
+                font-size: 18px;
+                line-height: 1.333;
+                height: 2.666em;
+                width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                margin-bottom: 20px;
+
+
+            }
+
+            .category {
+                display: inline-block;
+                text-align: center;
+                border-radius: 3px;
+                padding: 0 8px;
+                line-height: 26px;
+                border: 1px solid $c-red;
+
+                &.beauty {
+                    border-color: $c-red;
+                    color: $c-red;
+                }
+
+                &.hospital {
+                    border-color: $c-orange;
+                    color: $c-orange;
+                }
+
+                &.relevant {
+                    border-color: $c-blue;
+                    color: $c-blue;
+                }
+
+                &.education {
+                    border-color: $c-purple;
+                    color: $c-purple;
+                }
+
+                &.cafe {
+                    border-color: $c-green;
+                    color: $c-green;
+                }
+            }
+        }
+
+    }
+}
+
+small {
+    &.web {
+        display: inline-block !important;
+    }
+
+    &.mo {
+        display: none !important;
+    }
+
+}
+

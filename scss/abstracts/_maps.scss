@@ -1,0 +1,12 @@
+// Re-assigned maps
+//
+// Placed here so that others can override the default Sass maps and see automatic updates to utilities and more.
+
+// Utilities maps
+//
+// Extends the default `$theme-colors` maps to help create our utilities.
+// Come v6, we'll de-dupe these variables. Until then, for backward compatibility, we keep them to reassign.
+
+$negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
+
+$gutters: $spacers !default;

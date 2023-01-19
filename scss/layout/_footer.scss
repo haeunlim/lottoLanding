@@ -1,0 +1,117 @@
+
+// footer 
+#footer {
+    @include footStyle(50px, 50px);
+
+    .inner {
+        @include flexVal(flex, space-between, center);
+
+            .logo {
+                margin-right: 70px;
+
+            }
+            .mark{
+                margin-right: 30px;
+            }
+
+            .foot_info {
+
+                address {
+                    line-height: 1.6666;
+
+                    
+                }
+                .copy{
+                    margin-top: 10px;
+                    line-height: 1.3333;
+                }
+            }
+    }
+}
+
+// //footer 
+
+
+
+
+
+@include mobile {
+.quick_menu {
+    width: 100%;
+    top: auto;
+    bottom: -1px;
+    left: 0;
+    right: auto;
+    display: flex;
+    align-items: center;
+    height: 3.5714rem;
+
+
+    a {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        font-size: 1.0714rem;
+        text-indent: 0;
+        align-items: center;
+        justify-content: center;
+        background-color: $kakao-bg;
+        color: $kakao-text;
+
+        &.tel {
+            color: #fff;
+            background-color: $point;
+        }
+
+        &+a {
+            margin-top: 0;
+        }
+
+        span {
+            width: 2.2rem;
+            height: 3rem;
+            background-position: left -0.5rem center;
+        }
+    }
+}
+
+#footer {
+    padding: 2.5rem 0 6.07142rem;
+    letter-spacing: -0.05em;
+
+    .inner {
+        display: block;
+
+        .logo {
+            margin-right: 0;
+        }
+
+        .mark {
+            width: 3.2857rem;
+            margin-right: 0;
+            margin: 1.4285rem 0 1.0714rem;
+        }
+
+        .foot_left {
+            display: block;
+
+            .foot_info {
+                margin: 5.555vw 0 6.94444vw;
+
+                .footer_link a+a {
+                    margin-left: 2.7777vw;
+                }
+
+                address {
+                    line-height: 1.538;
+                    margin: 4.1666vw 0 2.7777vw;
+                }
+            }
+        }
+
+        .sns_list a {
+            width: 12.5vw;
+        }
+    }
+}
+}
