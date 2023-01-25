@@ -13,10 +13,7 @@
   -ms-flex-wrap: $fleWrap;
   flex-wrap: $fleWrap;
 }
-@mixin bodyPropertyDefault($break: keep-all, $spacing: -0.04em){
-  word-break: $break;
-  letter-spacing: $spacing;
-}
+
 @mixin bgCustom($url:'', $repeat:no-repeat, $position:center, $size:cover) {
   background: url($url) $repeat $position / $size;
 }

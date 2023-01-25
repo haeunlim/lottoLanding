@@ -3,10 +3,10 @@
 
 small {
     width: 1px;
-    height: 0.85em;
+    height: 0.8em;
     display: inline-block;
     margin: -0.2em 0.5em 0 0.75em;
-    background-color: #5c5c5c;
+    background-color: $footer-line-color;
     vertical-align: middle;
     // font-weight: 100; 
 }
@@ -45,7 +45,7 @@ input[type="tel"] {
 }
 
 textarea::placeholder {
-    color: #191919;
+    color: #{$palceholder-color};
 }
 
 input[type="text"]:hover,
@@ -104,71 +104,218 @@ input[type="tel"]:focus {
 // ------------------------------------------------------------ 
 
 // text-align 
-.ta {
-    &l {
-        text-align: left !important;
-    }
-
-    &r {
-        text-align: right !important;
-    }
-
-    &c {
-        text-align: center !important;
-    }
+.tal {
+    text-align: left !important;
 }
 
-.color {
-
-    &_w {
-        color: $white !important;
-    }
-
-    &_b1 {
-        color: $gray-2525 !important;
-    }
-
-    &_b2 {
-        color: $gray-4545 !important;
-    }
-
-    &_g1 {
-        color: $gray-7575 !important;
-    }
-
-    &_g2 {
-        color: $gray-999 !important;
-    }
-
-    &_point{
-        color: $point !important;
-    }
-
+.tar {
+    text-align: right !important;
 }
 
-// textarea placeholder 
+.tac {
+    text-align: center !important;
+}
 
-.placeholder {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
+.color_w {
+    color: $white !important;
+}
+
+.color_b1 {
+    color: $gray-2525 !important;
+}
+
+.color_b2 {
+    color: $gray-4545 !important;
+}
+
+.color_g1 {
+    color: $gray-7575 !important;
+}
+
+.color_g2 {
+    color: $gray-999 !important;
+}
+
+.color_point {
+    color: $point !important;
+}
+
+.flex {
+    @extend %flex;
+}
+
+.flex_b {
+    @extend %flex;
+    @extend %jc-space-between;
 
 }
 
-.placeholder li p {
-    line-height: 1.5;
-    color: $gray-999;
-    text-indent: -10px;
-    padding-left: 10px;
+.flex_b_c {
+    @extend %flex;
+    @extend %jc-space-between;
+    @extend %align-items-center;
 }
 
-.blind {
-    font-size: 0;
+.flex_b_e {
+    @extend %flex;
+    @extend %jc-space-between;
+    @extend %align-items-end;
 }
 
+.flex_b_s {
+    @extend %flex;
+    @extend %jc-space-between;
+    @extend %align-items-start;
+}
+
+.flex_a {
+    @extend %flex;
+    @extend %jc-space-around;
+
+}
+
+.flex_a_c {
+    @extend %flex;
+    @extend %jc-space-around;
+    @extend %align-items-center;
+}
+
+.flex_a_e {
+    @extend %flex;
+    @extend %jc-space-around;
+    @extend %align-items-end;
+}
+
+.flex_a_s {
+    @extend %flex;
+    @extend %jc-space-around;
+    @extend %align-items-start;
+}
+
+.flex_c {
+    @extend %flex;
+    @extend %jc-center;
+
+}
+
+.flex_c_c {
+    @extend %flex;
+    @extend %jc-center;
+    @extend %align-items-center;
+}
+
+.flex_c_e {
+    @extend %flex;
+    @extend %jc-center;
+    @extend %align-items-end;
+}
+
+.flex_c_s {
+    @extend %flex;
+    @extend %jc-center;
+    @extend %align-items-start;
+}
+
+.flex_e {
+    @extend %flex;
+    @extend %jc-end;
+
+}
+
+.flex_e_c {
+    @extend %flex;
+    @extend %jc-end;
+    @extend %align-items-center;
+}
+
+.flex_e_e {
+    @extend %flex;
+    @extend %jc-end;
+    @extend %align-items-end;
+}
+
+.flex_e_s {
+    @extend %flex;
+    @extend %jc-end;
+    @extend %align-items-start;
+}
+
+.flex__c {
+    @extend %flex;
+    @extend %align-items-center;
+
+}
+
+.flex__e {
+    @extend %flex;
+    @extend %align-items-end;
+}
+
+.flex__s {
+    @extend %flex;
+    @extend %align-items-start;
+
+
+}
+
+.dr-row {
+    flex-direction: row;
+}
+
+.dr-col {
+    flex-direction: column;
+}
+
+.dr-col-reverse {
+    flex-direction: column-reverse;
+}
+
+.dr-row-reverse {
+    flex-direction: row-reverse;
+}
+
+[class*="flex"].col_2{
+    flex-wrap: wrap;
+    width: calc(100% + (var(--mg-x) * 2));
+    margin-left: calc(-1 * var(--mg-x));
+    margin-top: calc(-1 * var(--mg-top));
+
+    > *{
+        width: calc(50% - (var(--mg-x) * 2));
+        margin: var(--mg-top) var(--mg-x) 0;
+    }
+}
+.flex1{
+ > *{
+    flex: 1;
+ }
+}
+[class*="flex"].col_3{
+    flex-wrap: wrap;
+    width: calc(100% + (var(--mg-x) * 2));
+    margin-left: calc(-1 * var(--mg-x));
+    margin-top: calc(-1 * var(--mg-top));
+
+    > *{
+        width: calc(33.333% - (var(--mg-x) * 2));
+        margin: var(--mg-top) var(--mg-x) 0;
+    }
+}
+
+[class*="flex"].equal_sizes{
+
+    > *{
+        width: 50%;
+    }
+}
+[class*="flex"].side_by_side{
+
+    > *{
+      margin-top: 0;
+
+      margin-left: var(--mg-s);
+    }
+}
 
 // input[type=radio] {display: none;} 
 .checkbox1 {
@@ -178,8 +325,8 @@ input[type="tel"]:focus {
         &+label {
             position: relative;
             display: inline-block;
-            padding-left: calc($chk-w1 + 10px);
-            line-height: $chk-w1;
+            padding-left: calc(#{$chk-w1} + 10px);
+            line-height: #{$chk-w1};
             vertical-align: middle;
 
             &::after {
@@ -192,8 +339,8 @@ input[type="tel"]:focus {
                 left: 0;
                 top: 50%;
                 transform: translateY(-50%);
-                width: $chk-w1;
-                height: $chk-w1;
+                width: #{$chk-w1};
+                height: #{$chk-w1};
             }
         }
 
@@ -203,11 +350,6 @@ input[type="tel"]:focus {
             border: none;
         }
     }
-
-
-
-
-
 }
 
 .chk_box {
@@ -218,8 +360,8 @@ input[type="tel"]:focus {
         &+label {
             position: relative;
             display: inline-block;
-            padding-left: calc($chk-w2 + 10px);
-            line-height: $chk-w2;
+            padding-left: calc(#{$chk-w2} + 10px);
+            line-height: #{$chk-w2};
             vertical-align: middle;
             cursor: pointer;
 
@@ -233,13 +375,14 @@ input[type="tel"]:focus {
                 left: 0;
                 top: 50%;
                 transform: translateY(-50%);
-                width: $chk-w2;
-                height: $chk-w2;
+                width: #{$chk-w2};
+                height: #{$chk-w2};
             }
         }
-        &:checked+label::after{
+
+        &:checked+label::after {
             background-image: url(../img/ico/chk_ico.png);
-    
+
         }
 
     }
@@ -247,29 +390,29 @@ input[type="tel"]:focus {
 
 
 .radiobox_wrap {
-    &>div{
+    &>div {
         display: inline-block;
-        
-        &+div{
 
+        &+div {
             margin-left: 20px;
         }
     }
 }
+
 .radiobox {
     input[type="radio"] {
         display: none;
 
-        &+label{
+        &+label {
             vertical-align: middle;
             position: relative;
             display: inline-block;
-            padding-left: calc($rdo-w1 + 10px);
-            line-height: $rdo-w1;
+            padding-left: calc(#{$rdo-w1} + 10px);
+            line-height: #{$rdo-w1};
             cursor: pointer;
 
             &::after,
-            &::before{
+            &::before {
                 content: '';
                 position: absolute;
                 background-color: $c-w;
@@ -279,18 +422,20 @@ input[type="tel"]:focus {
                 left: 0;
                 top: 50%;
                 transform: translateY(-50%);
-                width: $rdo-w1;
-                height: $rdo-w1;
+                width: #{$rdo-w1};
+                height: #{$rdo-w1};
                 border-radius: 100%;
             }
-            &::after{
+
+            &::after {
                 width: $rdo-in-w1;
                 height: $rdo-in-w1;
                 transform: translate(43%, -50%);
                 border: none;
             }
         }
-        &:checked+label::after{
+
+        &:checked+label::after {
             background-color: $point;
 
         }
@@ -301,39 +446,43 @@ input[type="tel"]:focus {
     input[type="radio"] {
         display: none;
 
-        &+label{
+        &+label {
             position: relative;
             display: inline-block;
-            padding-left: calc($rdo-w1 + 10px);
-            line-height: $rdo-w1;
+            padding-left: calc(#{$rdo-w1} + 10px);
+            line-height: #{$rdo-w1};
             cursor: pointer;
 
             &::after,
-            &::before{
+            &::before {
                 content: '';
                 position: absolute;
                 left: 0;
                 top: 50%;
                 transform: translateY(-50%);
-                width: $rdo-w1;
-                height: $rdo-w1;
+                width: #{$rdo-w1};
+                height: #{$rdo-w1};
                 border-radius: 100%;
             }
-            &::before{
+
+            &::before {
                 background-color: $c-w;
                 border: 1px solid $l-db;
             }
-            &::after{
-                width: calc($rdo-w1 / 2);
-                height: calc($rdo-w1 / 2);
-                margin-left: calc($rdo-w1 / 3.5);
+
+            &::after {
+                width: calc(#{$rdo-w1} / 2);
+                height: calc(#{$rdo-w1} / 2);
+                margin-left: calc(#{$rdo-w1} / 3.5);
             }
         }
-        &:checked+label::before{
+
+        &:checked+label::before {
             background-color: $point;
             border: 1px solid $point;
         }
-        &:checked+label::after{
+
+        &:checked+label::after {
             background-color: $c-w;
 
         }
@@ -349,27 +498,27 @@ input[type="tel"]:focus {
     border: solid 1px #dddddd;
     border-radius: 5px;
     z-index: 99999 !important;
-    
-    table{
+
+    table {
         background: #fff;
 
-        thead tr th{
+        thead tr th {
             width: 32px;
             line-height: 24px;
             height: 24px;
             text-align: center;
             padding-right: 5px;
-            
-            span{
+
+            span {
                 font-size: 10.1px;
                 font-weight: 300;
                 color: #999999;
             }
         }
 
-        tbody{
+        tbody {
 
-            tr td{
+            tr td {
                 text-align: center;
                 color: #666666;
                 font-size: 12px;
@@ -379,7 +528,7 @@ input[type="tel"]:focus {
                 background: #ffffff;
                 margin: 1px;
 
-                a{
+                a {
                     display: block;
                     width: 100%;
                     height: 100%;
@@ -387,22 +536,24 @@ input[type="tel"]:focus {
                     border-radius: 50%;
                     font-weight: 300;
 
-                    &:hover{
+                    &:hover {
                         background-color: $point;
                         color: #fff;
                     }
-                    &.ui-state-default.ui-state-active{
+
+                    &.ui-state-default.ui-state-active {
                         border: solid 1px $point;
                     }
                 }
+
                 &.ui-datepicker-unselectable.ui-state-disabled {
                     background: #fff;
                     color: #cecece;
                 }
-                
+
             }
         }
-        
+
     }
 }
 
@@ -414,7 +565,7 @@ input[type="tel"]:focus {
     margin-top: 20px;
     margin-bottom: 20px;
 
-    span{
+    span {
         text-align: center;
         color: #000000;
         font-size: 15px;
@@ -424,6 +575,7 @@ input[type="tel"]:focus {
             font-weight: 300;
         }
     }
+
     select.ui-datepicker-year,
     select.ui-datepicker-month {
         display: inline-block;
@@ -432,6 +584,7 @@ input[type="tel"]:focus {
         height: 20px;
         box-sizing: content-box;
     }
+
     select.ui-datepicker-month {
         margin-left: 10px;
     }
@@ -452,6 +605,7 @@ input[type="tel"]:focus {
         top: -2px;
         cursor: pointer;
     }
+
     a.ui-datepicker-next {
         text-indent: -9999px;
         position: absolute;
@@ -465,15 +619,16 @@ input[type="tel"]:focus {
 }
 
 
-input.date_form{
+input.date_form {
     background: url("../img/ico/ico_calander.png") no-repeat;
     background-position: 98% center;
 
     &::-moz-placeholder,
-    &::-webkit-input-placeholder ,
+    &::-webkit-input-placeholder,
     &:-ms-input-placeholder {
         color: #333333;
     }
+
     &.date_form3 {
         background: none;
     }
@@ -554,15 +709,32 @@ small.mo {
         display: none !important;
     }
 
+    
+[class*="flex"].mo_col_1{
+    width: 100% ;
+    margin-left: 0 ;
+    margin-top: calc(-1 * var(--mo-mg-top));
 
-
+    > *{
+        width: 100% ;
+        margin: var(--mo-mg-top) 0 0;
+    }
+}
     .mo_block_100 {
         display: block;
-    }
 
-    .mo_block_100>* {
-        width: 100% !important;
-        margin-left: 0;
+        > * {
+            flex: unset;
+            width: 100% !important;
+            
+           
+        }
+        >*:nth-of-type(n + 2){
+            margin-left: 0 !important;
+            margin-top: var(--mo-mg-top);
+            
+        }
+    
     }
 
 

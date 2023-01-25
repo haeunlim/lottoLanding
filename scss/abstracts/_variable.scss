@@ -27,7 +27,7 @@ $gray-333: #333333 !default;
 $gray-2525: #252525 !default;
 $black: #000 !default;
 // scss-docs-end gray-color-variables
-
+$footer-line-color: #999999;
 // fusv-disable
 // scss-docs-start gray-colors-map
 $grays: ("100": $gray-eee,
@@ -82,6 +82,8 @@ $prefix: $variable-prefix !default;
 $font-family-sans-serif: 'Noto Sans KR',
 sans-serif !default;
 $font-family-point: 'yg-jalnan',
+sans-serif !default;
+$font-family-nanum: 'NanumSquare',
 sans-serif !default;
 // stylelint-enable value-keyword-case
 $font-family-base: var(--#{$prefix}font-sans-serif) !default;
@@ -173,6 +175,10 @@ sans-serif;
 $point-font: 'yg-jalnan',
 sans-serif;
 
+$palceholder-color: $gray-bbb;
+
+
+
 
 $c-bs: #252525;
 $c-bl1: #252525;
@@ -208,8 +214,8 @@ $kakao-bg: #f9e000;
 $kakao-text: #381e1f;
 
 
-$border-radius1-pc: 1.5rem !default;
-$border-radius1-mo: .375rem !default;
+$border-radius1-pc: 1rem !default;
+$border-radius1-mo: .666rem !default;
 
 %radius {
     border-radius: $border-radius1-pc;
@@ -226,54 +232,47 @@ $gutters: $spacers !default;
 
 // font-size
 $html-font-size-pc: 20px;
-$html-font-size-mo: 14px;
+$html-font-size-tablet: 16px;
+
+$html-font-size-mo: 4.1666vw;
 
 // main visual text
-$ttl-big-pc: 84px;
-$ttl-big-mo: 35px;
+$ttl-big-pc: 4.2rem;
+$ttl-big-bot-pc: 1rem;
+$bg-text-pc: 1.1rem;
 
-$ttl-big-bot-pc: 20px;
-$ttl-big-bot-mo: 14px;
+$ttl-pc: 3rem;
+$ttl-top-pc: 1.1rem;
+$ttl-bot-pc: 0.95rem;
+$ttl-small-pc: 1.3rem;
+$text-btn-pc: 1rem;
+$gnb-txt-pc: 0.95rem;
+$cont-ttl-pc: 1.2rem;
+$footer-font-size-pc: 0.7rem;
 
 
-$box-text-pc: 22px;
-$box-text-mo: 31px;
 
+// mobile
 
-// ttl 공통
-$ttl-pc: 60px;
-$ttl-mo: 30px;
-
-$ttl-top-pc: 22px;
-$ttl-top-mo: 13px;
-
-$ttl-bot-pc: 19px;
-$ttl-bot-mo: 22px;
-
+$ttl-big-mo: 3.666rem;
+$ttl-big-bot-mo: 1rem;
+$bg-text-mo: 1.066rem;
+$ttl-mo: 2.3333rem;
+$ttl-top-mo: 1.0666rem;
+$ttl-bot-mo: 0.9333rem;
 // ttl 작은
-$ttl-small-pc: 26px;
-$ttl-small-mo: 14px;
-// $txt-pc: 20px;
-// $txt-mo: 14px;
+$ttl-small-mo: 0.9333rem;
+// $txt-pc: 1rem;
+// $txt-mo: 0.7rem;
 
-// $txt2-pc: 19px;
-// $txt2-mo: 14px;
-
-$text-btn-pc: 20px;
+// $txt2-pc: 0.95rem;
+// $txt2-mo: 0.7rem;
 $text-btn-mo: 14px;
-
-// $txt-big-pc: 24px;
-// $txt-big-mo: 24px;
-
-$gnb-txt-pc: 19px;
-$gnb-txt-mo: 14px;
-
-$cont-ttl-pc: 24px;
-$cont-ttl-mo: 14px;
-
-
-$footer-font-size-pc: 14px;
-$footer-font-size-mo: 14px;
+// $txt-big-pc: 1.2rem;
+// $txt-big-mo: 1.2rem;
+$gnb-txt-mo: 1.466rem;
+$cont-ttl-mo: 1.1333rem;
+$footer-font-size-mo: 0.666rem;
 
 
 
@@ -298,8 +297,8 @@ $footer-font-size-mo: 14px;
     font-size: $ttl-pc;
 }
 
-%box-text {
-    font-size: $box-text-pc;
+%bg-text {
+    font-size: $bg-text-pc;
 }
 
 %ttl-top {
@@ -310,7 +309,10 @@ $footer-font-size-mo: 14px;
 %ttl-box-num {
     font-size: $ttl-bot-pc;
 }
-
+%bodyPropertyDefault{
+    word-break: keep-all;
+    letter-spacing: -0.04em;
+  }
 
 
 %gnb-txt {
@@ -325,20 +327,98 @@ $footer-font-size-mo: 14px;
     font-size: $footer-font-size-pc;
 }
 
+%flex{
+    display: -webkit-box;
+    display: -moz-box;
+    display: flex;
+    display: -ms-flexbox;
+}
+%jc-space-between{
+    justify-content: space-between;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+}
+%jc-space-around{
+    justify-content: space-around;
+    -webkit-box-pack: space-around;
+    -ms-flex-pack: space-around;
+}
+%jc-center{
+    justify-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+}
+%jc-end{
+    justify-content: end;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+}
+%align-items-start{
+    align-items: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+}
+%align-items-center{
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+}
+%align-items-end{
+    align-items:flex-end;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+}
+
+%fw-nowrap{
+    -moz-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
 
 %button{
     display: block;
     width: 100%;
-    font-size: 20px;
-    max-width: 240px;
-    border-radius: 30px;
+    font-size: 1rem;
+    max-width: 12rem;
+    border-radius: 1.5rem;
     background-color: $point;
-    height: 60px;
-    line-height: 60px;
+    height: 3rem;
+    line-height: 3rem;
     color: $white;
     text-align: center;
     box-shadow: 0 0.6875rem 1.2rem rgba($color: $point, $alpha: 0.25);
     font-weight: 600 ;
+    border: none;
+  }
+  
+%button2{
+    display: block;
+    width: 100%;
+    font-size: 1.25rem;
+    border-radius: 1.95rem;
+    background-color: $point;
+    height: 4rem;
+    line-height: 4rem;
+    color: $white;
+    text-align: center;
+    font-weight: 500 ;
+    border: none;
+    
+    strong{
+        font-weight: 600;
+        color: #fffc00;
+    }
+    &::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0.4rem;
+        left: 0;
+        background-color: $point3;border-radius: inherit;
+        box-shadow: 0 0.6875rem 1.2rem rgba($color: #230e76, $alpha: 0.25);
+        z-index: -1;
+    }
   }
   
 
@@ -365,6 +445,11 @@ $footer-font-size-mo: 14px;
 }
 
 
+@include tablet{
+    %basic-txt {
+        font-size: $html-font-size-tablet;
+    }
+}
 @include mobile{
     
 %basic-txt {
@@ -389,8 +474,8 @@ $footer-font-size-mo: 14px;
     font-size: $ttl-mo;
 }
 
-%box-text {
-    font-size: $box-text-mo;
+%bg-text {
+    font-size: $bg-text-mo;
 }
 
 %ttl-top {
@@ -414,4 +499,69 @@ $footer-font-size-mo: 14px;
 %footer-txt {
     font-size: $footer-font-size-mo;
 }
+%radius {
+    border-radius: $border-radius1-mo;
+}
+
+%button{
+    display: block;
+    width: 11.666rem;
+    max-width: 11.666rem;
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    background-color: $point;
+    height: 3rem;
+    line-height: 3rem;
+    color: $white;
+    text-align: center;
+    box-shadow: 0 0.3437rem .6rem rgba($color: $point, $alpha: 0.25);
+    font-weight: 600 ;
+    border: none;
+  }
+  
+%button2{
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 1.8333em;
+    background-color: $point;
+    height: 3.66rem;
+    line-height: 3.66rem;
+    color: $white;
+    text-align: center;
+    font-weight: 500 ;
+    border: none;
+    
+    strong{
+        font-weight: 600;
+        color: #fffc00;
+    }
+    &::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0.333rem;
+        left: 0;
+        background-color: $point3;border-radius: inherit;
+        box-shadow: 0 0.3437rem .6rem rgba($color: #230e76, $alpha: 0.25);
+        z-index: -1;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

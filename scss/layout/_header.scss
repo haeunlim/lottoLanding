@@ -1,4 +1,3 @@
-
 // header 
 #header {
     position: fixed;
@@ -9,7 +8,8 @@
     transition: all 0.3s;
     background-color: transparent;
     color: #fff;
-    @include bgCustom('../img/header_bg.png', repeat-x, bottom center, 100% auto);
+    @include bgCustom('../img/header_bg.png', no-repeat, top -110px center);
+    transition: background .5s;
     height: 100px;
 
     .inner {
@@ -20,13 +20,19 @@
     }
 
 }
+
+#header.active {
+    background-position: center;
+}
+
 .logo {
     a {
         display: block;
     }
 
 }
- .gnb_list {
+
+.gnb_list {
     @include flexVal(flex, space-between, center);
 
     li {
@@ -37,33 +43,37 @@
             font-weight: $fw-medium;
             display: block;
             padding: 10px 0;
-         
+
 
         }
     }
 }
-.quick_menu{
+
+.quick_menu {
     position: fixed;
     top: 120px;
-    right: 60px;      z-index: 80;
-    
-    a{
+    right: 60px;
+    z-index: 80;
+
+    a {
         display: block;
         text-indent: -99999px;
         font-size: 0;
         width: 84px;
         height: 84px;
-        span{
+
+        span {
             display: block;
             width: 100%;
             height: 100%;
             @include bgCustom('../img/kakao_ico.png');
         }
     }
-    a+a{
+
+    a+a {
         margin-top: 20px;
 
-        span{
+        span {
 
             background-image: url('../img/tel_ico.png');
         }
@@ -71,7 +81,7 @@
 }
 
 .all_menu_wrap {
-    @include positionCustom(0,0,0,0);
+    @include positionCustom(0, 0, 0, 0);
     width: 100%;
     height: calc(100vh - 4rem);
     top: 4rem;
@@ -81,35 +91,45 @@
     left: 100vw;
     opacity: 0;
 
-    
-    .all_menu{
+
+    .all_menu {
         height: 100%;
         max-height: calc(100vh - 4rem);
         overflow-y: auto;
-    }}
-    
-.ham{
+    }
+}
+
+.ham {
     display: block;
-    @include bgCustom('../img/ham.png');
+    @include bgCustom('../img/ham_w_40.png');
+    @include positionYCenter();
+    border: none;
     width: 1.7857rem;
     height: 1.7857rem;
-z-index: 50;
+    z-index: 50;
 
 }
-.gnb_open{
+
+.gnb_open {
     overflow: hidden;
-    #header{
-        background-color: #252525;
+
+    #header {
+        background: rgb(150,118,255);
+background: -moz-linear-gradient(145deg, rgba(150,118,255,1) 0%, rgba(88,96,228,1) 100%);
+background: -webkit-linear-gradient(145deg, rgba(150,118,255,1) 0%, rgba(88,96,228,1) 100%);
+background: linear-gradient(145deg, rgba(150,118,255,1) 0%, rgba(88,96,228,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9676ff",endColorstr="#5860e4",GradientType=1);
         color: #fff;
 
-        .ham{
-            background-image: url(../img/ham_on.png)
+        .ham {
+            background-image: url(../img/ham_w_40_on.png)
         }
-        
-        .all_menu_wrap{
+
+        .all_menu_wrap {
             overflow: visible;
             left: 0;
-            opacity: 1;}
+            opacity: 1;
+        }
     }
 }
 
@@ -124,11 +144,19 @@ z-index: 50;
         display: none;
     }
 
+    #header {
+        background: rgba($color: #3931c6, $alpha:0.6);
+        height: 3.666rem;
+    }
+
     #header .inner {
-        height: 4rem;
+        height: inherit;
+        justify-content: center;
 
 
-
+        .logo {
+            width: 3.833rem;
+        }
     }
 
     .logo {
@@ -148,7 +176,7 @@ z-index: 50;
             text-align: center;
 
             &+li {
-                margin-top: 5vh;
+                margin-top: 3vh;
             }
 
             a {
@@ -156,7 +184,7 @@ z-index: 50;
                 padding: 2.7777vw;
                 font-weight: $fw-medium;
 
-                b {
+                span{
                     font-weight: $fw-bold;
                 }
 

@@ -1,31 +1,76 @@
-
 // footer 
 #footer {
-    @include footStyle(50px, 50px);
+    @include footStyle(0, 50px);
 
-    .inner {
-        @include flexVal(flex, space-between, center);
+    .foot_top {
+        text-align: center;
+        background-color: var(--bs-gray-700);
+        color: var(--bs-gray-400);
 
-            .logo {
-                margin-right: 70px;
+        a {
+            display: inline-block;
+            line-height: 60px;
 
+            &+a {
+                margin-left: 50px;
             }
-            .mark{
-                margin-right: 30px;
-            }
+        }
+
+    }
+
+    .foot_bottom {
+        padding: 50px 25px 0;
+
+
+        .inner {
+            @include flexVal(flex, space-between, start);
+            color: var(--bs-gray-400);
 
             .foot_info {
+                line-height: 1.5714;
 
-                address {
-                    line-height: 1.6666;
+                .detail_info {
+                    color: var(--bs-gray-500);
 
-                    
-                }
-                .copy{
-                    margin-top: 10px;
-                    line-height: 1.3333;
+                    p {
+                        margin-top: 20px;
+                    }
                 }
             }
+
+            .contact_info {
+                p {
+                    strong {
+                        font-weight: $fw-bolder;
+                        font-size: 20px;
+                    }
+
+                    &:nth-of-type(3) {
+                        margin-top: 5px;
+                    }
+
+                    &:nth-of-type(n+3) {
+                        line-height: 1.5714;
+                    }
+                }
+
+                .contact_btn {
+                    display: inline-flex;
+                    margin-top: 20px;
+                    align-items: center;
+                    padding: 0 24px 0 12px;
+                    @include bgCustom('../img/btn_small_arrow.png', no-repeat, right 12px center, 7px auto);
+                    height: 30px;
+                    line-height: 28px;
+                    color: var(--bs-gray-400);
+                    border: 1px solid var(--bs-border-color);
+
+                    &+a {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -36,82 +81,123 @@
 
 
 @include mobile {
-.quick_menu {
-    width: 100%;
-    top: auto;
-    bottom: -1px;
-    left: 0;
-    right: auto;
-    display: flex;
-    align-items: center;
-    height: 3.5714rem;
-
-
-    a {
-        width: 50%;
-        height: 100%;
+    .quick_menu {
+        width: 100%;
+        top: auto;
+        bottom: -1px;
+        left: 0;
+        right: auto;
         display: flex;
-        font-size: 1.0714rem;
-        text-indent: 0;
         align-items: center;
-        justify-content: center;
-        background-color: $kakao-bg;
-        color: $kakao-text;
+        height: 3.5714rem;
 
-        &.tel {
-            color: #fff;
-            background-color: $point;
-        }
 
-        &+a {
-            margin-top: 0;
-        }
+        a {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            font-size: 1.0714rem;
+            text-indent: 0;
+            align-items: center;
+            justify-content: center;
+            background-color: $kakao-bg;
+            color: $kakao-text;
 
-        span {
-            width: 2.2rem;
-            height: 3rem;
-            background-position: left -0.5rem center;
+            &.tel {
+                color: #fff;
+                background-color: $point;
+            }
+
+            &+a {
+                margin-top: 0;
+            }
+
+            span {
+                width: 2.2rem;
+                height: 3rem;
+                background-position: left -0.5rem center;
+            }
         }
     }
-}
 
-#footer {
-    padding: 2.5rem 0 6.07142rem;
-    letter-spacing: -0.05em;
+    #footer {
+        padding-bottom:3rem;
+        font-size: $footer-font-size-mo;
 
-    .inner {
-        display: block;
+        .foot_top {
+            padding: .7rem 0;
+            width: calc(100% + 2rem);
+            margin-left: -1rem;
 
-        .logo {
-            margin-right: 0;
-        }
+            a {
+                line-height: 2;
+                font-size: 0.86666rem;
+                margin: 0 1rem;
 
-        .mark {
-            width: 3.2857rem;
-            margin-right: 0;
-            margin: 1.4285rem 0 1.0714rem;
-        }
-
-        .foot_left {
-            display: block;
-
-            .foot_info {
-                margin: 5.555vw 0 6.94444vw;
-
-                .footer_link a+a {
-                    margin-left: 2.7777vw;
-                }
-
-                address {
-                    line-height: 1.538;
-                    margin: 4.1666vw 0 2.7777vw;
+                &+a {
+                    margin-left: 1rem;
                 }
             }
         }
 
-        .sns_list a {
-            width: 12.5vw;
+        .foot_bottom {
+            padding: 2.6666rem 0 0;
+
+            .inner {
+                display: block;
+
+
+
+                .foot_info {
+                    .detail_info {
+                        p {
+                            margin-top: 1.4rem;
+                            position: relative;
+
+                            span {
+                                padding-left: 11em;
+                                position: absolute;
+                            }
+                        }
+                    }
+                }
+
+                .contact_info {
+                    margin-top: 2rem;
+
+                    p {
+                        font-size: 0.8rem;
+
+                        strong{
+                          font-size: 1rem;
+                        }
+
+                        &:nth-of-type(n+ 3) {
+                            font-size: 0.8666rem;
+                            line-height: 1.75;
+                        }
+                        &:nth-of-type(3){
+                            margin-top: 2rem;
+                        }
+                    }
+
+                .contact_btn{
+                    margin-top: 1.333rem;
+                    font-size: 0.8rem;
+                    padding: 0 2.666rem 0 1.666rem;
+                    height: 2.666rem;
+                    line-height: 2.533rem;
+                    border-width: 0.0666rem;
+                    background-position: right 1.666rem center;
+                    background-size: 0.4666rem auto;
+
+                    &+a{
+                        margin-left: 1.266rem;
+                    }
+
+                }
+                }
+            }
         }
     }
-}
 }

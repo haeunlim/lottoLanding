@@ -21,11 +21,12 @@
     <link href="css/style.css" rel="stylesheet" type="text/css" />
 
 
+    <script src="js/ie11CustomProperties.js" type="text/javascript"></script>
     <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
     <script src="js/slick.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <title>Lotto</title>
+    <title>로또띠앗</title>
 </head>
 
 <body>
@@ -39,22 +40,25 @@
                 <nav class="gnb">
                     <ul class="gnb_list">
                         <li>
-                            <a href="#link01">국내 유일 서비스</a>
+                            <a href="#link01"><span>국내 유일</span> 서비스</a>
                         </li>
                         <li>
-                            <a href="#link02">꽝없는 Drop JACKPOT</a>
+                            <a href="#link02">꽝없는 <span>Drop JACKPOT</span></a>
                         </li>
                         <li>
-                            <a href="#link03">환전 신청</a>
+                            <a href="#link03"><span>환전</span> 신청</a>
                         </li>
                         <li>
-                            <a href="#link04">포인트 조회</a>
+                            <a href="#link04"><span>포인트</span> 조회</a>
                         </li>
                         <li>
-                            <a href="#link05">보상방법</a>
+                            <a href="#link05"><span>1,000원</span> 드림</a>
                         </li>
                         <li>
-                            <a href="#link06">로고</a>
+                            <a href="#link06"><span>제휴</span>회사</a>
+                        </li>
+                        <li>
+                            <a href="#link07"><span>보상</span>방법</a>
                         </li>
                     </ul>
                 </nav>
@@ -75,15 +79,17 @@
             <div class="main">
                 <div class="inner">
                     <div class="ttl_box white">
-                        <span class="box_text">띠앗 보상 대상인</span>
+                        <span class="bg_text">띠앗 보상 대상인</span>
                         <h2>
-                            <img src="img/main_ttl.png" alt="로또크래프트 적립금">
+                            <img src="img/main_ttl.png" alt="로또크래프트 적립금" class="only_web">
+                            <img src="img/main_ttl_mo.png" alt="로또크래프트 적립금" class="only_mo">
                         </h2>
                         <p>2014년 서비스 중지되었던 띠앗의 회원님들께<br>
                             포인트 환급과 적립금을 보상해드리는 파격적 이벤트!</p>
                     </div>
-                    <div class="main_visual" data-aos="fade-up">
-                        <img src="img/main_coins.png" alt="코인">
+                    <div class="main_visual" data-aos="fade-up" data-aos-delay="800">
+                        <img src="img/main_coins.png" alt="코인" class="only_web">
+                        <img src="img/main_coins_mo.png" alt="코인" class="only_mo">
                     </div>
                 </div>
             </div>
@@ -102,12 +108,25 @@
                         </h2>
                     </div>
                     <div class="cont">
-                      
+
                         <div class="info" data-aos="fade-up">
-                            <figure><img src="img/sect01_img.png" alt="">  <span class="ico ico_01 only_web" data-aos="fade-up"><img src="img/sect01_ball01.png" alt=""></span>
-                                <span class="ico ico_02" data-aos="fade-up"><img src="img/sect01_ball02.png" alt=""></span>
-                                <span class="ico ico_03" data-aos="fade-up"><img src="img/sect01_ball03.png" alt=""></span>
-                                <span class="ico card" data-aos="fade-left"><img src="img/sect01_card.png" alt=""></span></figure>
+                            <figure class="ani_parent">
+                                <img src="img/sect01_img.png" alt="" class="only_web">
+                                <img src="img/sect01_img_mo.png" alt="" class="only_mo">
+                                <span class="ani_ico ico_01" data-aos="fade-up" data-aos-delay="300">
+                                    <img src="img/sect01_ball01.png" alt="">
+                                </span>
+                                <span class="ani_ico ico_02" data-aos="fade-up" data-aos-delay="400">
+                                    <img src="img/sect01_ball02.png" alt="">
+                                </span>
+                                <span class="ani_ico ico_03" data-aos="fade-up" data-aos-delay="500">
+                                    <img src="img/sect01_ball03.png" alt="">
+                                </span>
+                                <span class="ani_ico card" data-aos="fade-left">
+                                    <img src="img/sect01_card.png" alt="" class="only_web">
+                                    <img src="img/sect01_card_mo.png" alt="" class="only_mo">
+                                </span>
+                            </figure>
                             <figcaption>
                                 <div class="ttl_box tal" data-aos="fade-up">
                                     <span class="top_txt">
@@ -115,23 +134,26 @@
                                     </span>
                                     <h2>
                                         미국 로또를 지분으로 쪼개서 살 수<br>
-                                    있는 국내 유일의 서비스
+                                        있는 국내 유일의 서비스
                                     </h2>
-                                    <p>일반적으로 최소 1,000억원 이상인 로또 잭팟 당첨금에
-                                        수월하게 도전하기 위해 지분 쪼개기 방식으로 당첨 확률을
-                                        매우 높게 높일 수 있게 설계되었습니다.</p>
+                                    <p>일반적으로 <b>최소 1,000억원 이상인 로또 잭팟 당첨금</b>에
+                                        수월하게 도전하기 위해 지분 쪼개기 방식으로 <b>
+                                            당첨 확률을
+                                            매우 높게 높일 수 있게 설계
+                                        </b>되었습니다.</p>
                                 </div>
                             </figcaption>
                         </div>
-                        <div class="btn_wrap"><button type="button" class="btn mx-auto">특허증 보기</button></div>
+                        <div class="btn_wrap"><button type="button" class="btn mx-auto" data-aos="fade-up">특허증
+                                보기</button></div>
                     </div>
                 </div>
             </section>
             <!-- sect01 end -->
             <!-- sect02 start -->
-            <section class="sect02" id="link01">
-                <div class="inner">
-                    <div class="ttl_box  tal" data-aos="fade-up">
+            <section class="sect02" id="link02">
+                <div class="inner flex equal_sizes mo_block_100" style="--mg-s: 0; --mo-mg-top: 5.55vw">
+                    <div class="ttl_box tal" data-aos="fade-up">
                         <span class="top_txt">
                             한 회차에 10,000원 이상만 베팅한다면
                         </span>
@@ -139,14 +161,23 @@
                             꽝없는 Drop JACKPOT<br>
                             경품 가져가세요!
                         </h2>
-                        <p>한 회차에 10,000원 이상만 베팅하면 낙첨이 되어도 Drop JACKPOT<br>
-                            을 통해 낙첨자 룰렛을 돌려 꽝 없이 뭐든 하나라도 경품을<br>
+                        <p>한 회차에 10,000원 이상만 베팅하면 <b>
+                                낙첨이 되어도 Drop JACKPOT
+                                을 통해 낙첨자 룰렛
+                            </b>을 돌려 꽝 없이 뭐든 하나라도 경품을
                             가져가실 수 있습니다. </p>
-                        <div class="btn_wrap"><button tpye="button" class="btn">드랍잭팟 바로가기</button></div>
+                        <div class="btn_wrap"><button tpye="button" class="btn" data-aos="fade-up">드랍잭팟 바로가기</button>
+                        </div>
                     </div>
                     <div class="cont">
-                        <span class="ani_ico" data-aos="fade-up"><img src="img/coins02.png" alt=""></span>
-                        <figure><img src="img/roulette.png" alt=""></figure>
+                        <span class="ani_box" data-aos="fade-up" data-aos-delay="300">
+                            <img src="img/coins02.png" alt="" class="only_web">
+                            <img src="img/coins02_mo.png" alt="" class="only_mo">
+                        </span>
+                        <figure>
+                            <img src="img/roulette.png" alt="" class="only_web">
+                            <img src="img/roulette_mo.png" alt="" class="only_mo">
+                        </figure>
                     </div>
                 </div>
             </section>
@@ -159,19 +190,23 @@
                             로또 게임을 통해 당첨되신 적립금(3등~9등)
                         </span>
                         <h2>
-                            3등~9등은 바로 환전 신청!
+                            3등~9등은<br class="only_mo"> 바로 환전 신청!
                         </h2>
-                        <p>로또크래프트 적립금은 바로 환전 대상은 아니지만, 적립금(3등~9등)은<br>
-                            언제든지 바로 환전 신청하셔서 입금 받으실 수 있으며,<br>
-                            1, 2등에 당첨되셔도 현지 변호사, 회계사 등을 통해 당첨금을 받으실 수 있습니다.</p>
+                        <p>로또크래프트 적립금은 바로 환전 대상은 아니지만,<br class="only_mo"> <b>적립금(3등~9등)은<br class="only_web">
+                                언제든지 바로 환전 신청</b>하셔서 입금 받으실 수 있으며,<br>
+                            <b>1, 2등에 당첨되셔도</b> 현지 변호사, 회계사 등을 통해 <b>당첨금을 받으실 수 있습니다.</b></p>
                     </div>
                     <div class="cont">
-                        <span class="ani_ico" data-aos="fade-up"><img src="img/sect03_coin.png" alt=""></span>
+                        <span class="ani_box" data-aos="fade-up">
+                            <img src="img/sect03_coin.png" alt="" class="only_web">
+                            <img src="img/sect03_coin_mo.png" alt="" class="only_mo">
+                        </span>
                         <figure>
-                            <img src="img/sect03_visual.png" alt="">
+                            <img src="img/sect03_visual.png" alt="" class="only_web">
+                            <img src="img/sect03_visual_mo.png" alt="" class="only_mo">
                         </figure>
                         <div class="btn_wrap">
-                            <button type="button" class="white mx-auto">미국로또 당첨금 안내</button>
+                            <button type="button" class="white mx-auto" data-aos="fade-up">미국로또 당첨금 안내</button>
                         </div>
                     </div>
                 </div>
@@ -191,63 +226,285 @@
 
                     </div>
                     <div class="cont">
-                        <div class="left">
-                            <figure>
-                                <img src="img/center_visual.png" alt="">
-                            </figure>
-                            <figure>
-                                <img src="img/center_visual.png" alt="">
-                            </figure>
-                        </div>
-                        <div class="right">
-                            <figure>
-                                <img src="img/center_visual.png" alt="">
-                            </figure>
+                        <div class="visual">
+                            <div class="d-flex">
+                                <div class="box" data-aos="fade-right">
+                                    <figure>
+                                        <img src="img/3d_benefit_ico01.png" alt="현금 보상신청">
+                                    </figure>
+                                    <figcaption class="text_box">
+                                        <h4>현금 보상신청</h4>
+                                        <p>수수료 30% / 한달이상 소요</p>
+                                    </figcaption>
+                                </div>
 
+                                <div class="box" data-aos="fade-right">
+
+                                    <figure>
+                                        <img src="img/3d_benefit_ico02.png" alt="적립금 페이백">
+                                    </figure>
+                                    <figcaption class="text_box">
+                                        <h4>적립금 페이백</h4>
+                                        <p>수수료 30%</p>
+                                    </figcaption>
+                                </div>
+                                <div class="ani_ico">
+                                    +
+                                </div>
+                            </div>
+                            <span class="or" data-aos="fade-up" data-aos-delay="300">OR</span>
+                            <div class="box big" data-aos="fade-left">
+                                <figure>
+                                    <img src="img/3d_benefit_ico03.png" alt="로또크래프트 적립금 즉시 지급">
+                                </figure>
+                                <figcaption class="text_box">
+                                    <h4>로또크래프트 적립금 즉시 지급</h4>
+                                    <p>현금보상 미 신청분 150%</p>
+                                </figcaption>
+                            </div>
                         </div>
-                        <div class="ico_wrap">
-                            <span class="ico ico01">
-                                <img src="img/3d_coin01.png" alt="">
-                            </span>
-                            <button type="button" class="btn">포인트 조회 후 <span class="text-yellow">보상 신청하기</span></button>
+
+                        <div class="big_btn_wrap ani_parent mx-auto" data-aos="fade-up">
+                            <button type="button" class="big_btn">포인트 조회 후 <strong>보상
+                                    신청하기</strong></button>
+                            <span class="ani_ico ico_01"><img src="img/3d_coin01.png" alt=""></span>
+                            <span class="ani_ico ico_02" data-aos="fade-up" data-aos-delay="200"><img
+                                    src="img/img_3d_finger.png" alt=""></span>
+                            <span class="ani_ico ico_03"><img src="img/3d_coin02.png" alt=""></span>
                         </div>
-                        <span class="ico ico02">
-                            <img src="img/3d_coin02.png" alt="">
-                        </span>
-                        <span class="ico ico03">
-                            <img src="img/img_3d_finger.png" alt="">
-                        </span>
 
                     </div>
                 </div>
             </section>
             <!-- sect04 end -->
+            <section class="sect05" id="link05">
+                <div class="inner">
+                    <div class="ttl_box" data-aos="fade-up">
+                        <span class="top_txt">
+                            포인트 조회만 하셔도 +2,000원!
+                        </span>
+                        <h2>
+                            아주 간단하게!<br>
+                            2,000원을 더~
+                            드립니다
+                        </h2>
 
+                    </div>
+                    <div class="cont tac">
+                        <ul class="flex_b_c flex1 mo_block_100" style="--mg-x:0;--mg-top:0;--mo-mg-top: 2rem">
+                            <li data-aos="fade-up">
+                                <figure><img src="img/sect05_img01.png" alt=""></figure>
+                                <figcaption class="text_box">
+                                    <h4>무료 회원 가입 (+2,000원)</h4>
+                                    <p>무료 회원 가입하시면<br class="only_web">
+                                        2,000원을 드립니다.</p>
+                                </figcaption>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="300">
+                                <figure><img src="img/sect05_img02.png" alt=""></figure>
+                                <figcaption class="text_box">
+                                    <h4>띠앗 회원 (+2,000원)</h4>
+                                    <p>띠앗 회원이시면<br class="only_web">
+                                        총 5,000원을 받으시게 됩니다. </p>
+                                </figcaption>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="600">
+                                <figure><img src="img/sect05_img03.png" alt=""></figure>
+                                <figcaption class="text_box">
+                                    <h4>포인트 조회 (+2,000원)</h4>
+                                    <p>포인트 조회만하셔도<br class="only_web">
+                                        추가로 2,000원을 더! 드립니다</p>
+                                </figcaption>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="sect06" id="link06">
+                <div class="inner flex_b_c side_by_side mo_block_100" style="--mg-s: 0; --mo-mg-top: 2.2rem">
+                    <div class="ttl_box white tal" data-aos="fade-up">
+                        <span class="top_txt">
+                            로또크래프트는 띠앗과 함께합니다.
+                        </span>
+                        <h2>
+                            띠앗 대한민국 포인트<br>
+                            & 로또크래프트
+                        </h2>
+                        <p class="sky">띠앗과 로또크래프트는 <b>전략적 제휴회사</b>로 항상 고객님들께<br>
+                            다양한 혜택과 서비스를 제공하기 위해 <b>노력하겠습니다.</b></p>
+                    </div>
+                    <div class="cont">
+                        <div class="motion_box">
+                            <span class="motion_img img01" data-aos="fade-right">
+                                <img src="img/sect06_img01.png" alt="" class="only_web">
+                                <img src="img/sect06_img01_mo.png" alt="" class="only_mo">
+                            </span>
+                            <span class="motion_img img02" data-aos="fade-left">
+                                <img src="img/sect06_img02.png" alt="" class="only_web">
+                                <img src="img/sect06_img02_mo.png" alt="" class="only_mo">
+                            </span>
+                            <span class="motion_img img03" data-aos="fade-up" data-aos-delay="300">
+                                <img src="img/sect06_coins.png" alt="" class="only_web">
+                                <img src="img/sect06_coins_mo.png" alt="" class="only_mo">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sect07" id="link07">
+                <div class="inner">
+                    <div class="ttl_box" data-aos="fade-up">
+                        <span class="top_txt">
+                            보상 방법이 궁금하신가요??
+                        </span>
+                        <h2>
+                            보상 방법을<br>
+                            확인해 주세요!
+                        </h2>
 
+                    </div>
+                    <div class="cont">
+                        <ul class="flex col_2 mo_col_1" style="--mg-x: 20px; --mg-top:50px; --mo-mg-top: 2rem;">
+                            <li data-aos="fade-up">
+                                <figure>
+                                    <img src="img/sect07_img01.png" alt="">
+                                </figure>
+                                <figcaption>
+                                    <div class="text_box">
+                                        <h4 class="list_num">
+                                            <span class="num">1</span>
+                                            30% 수수료를 제한 금액을 현금으로 환급
+                                        </h4>
+                                        <p>환급 신청하신 띠앗포인트에서 <b>30% 수수료를 제한 금액을 현금으로
+                                                환급해 드립니다.</b> (한달 이후부터 순차적으로 본인명의 계좌로 입금)</p>
+                                    </div>
+                                </figcaption>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="300">
+                                <figure>
+                                    <img src="img/sect07_img02.png" alt="">
+                                </figure>
+                                <figcaption>
+                                    <div class="text_box">
+                                        <h4 class="list_num">
+                                            <span class="num">2</span>
+                                            수수료 30%는 적립금으로 페이백되어 적립
+                                        </h4>
+                                        <p><b>수수료 30%</b>는 현금 환급 신청과 즉시 <b>
+                                                로또크래프트 적립금으로
+                                                페이백되어 적립
+                                            </b>됩니다.</p>
+                                    </div>
+                                </figcaption>
+                            </li>
+                            <li data-aos="fade-up">
+                                <figure>
+                                    <img src="img/sect07_img03.png" alt="">
+                                </figure>
+                                <figcaption>
+                                    <div class="text_box">
+                                        <h4 class="list_num">
+                                            <span class="num">3</span>
+                                            150%로 가산되어 실시간 적립
+                                        </h4>
+                                        <p>환급 신청하지 않은 띠앗포인트 금액은 <b>
+                                                환급 신청과 즉시 로또크래프트
+                                                적립금으로 150%로 가산되어 실시간 적립
+                                            </b>됩니다.</p>
+                                    </div>
+                                </figcaption>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="300">
+                                <figure>
+                                    <img src="img/sect07_img04.png" alt="">
+                                </figure>
+                                <figcaption>
+                                    <div class="text_box">
+                                        <h4 class="list_num">
+                                            <span class="num">4</span>
+                                            현금 환급 대기중인 띠앗포인트
+                                        </h4>
+                                        <p>현금 환급 대기중인 띠앗포인트는 <b>
+                                                현금 환급 전에 로또크래프트 적립금으로
+                                                원하실 경우
+                                            </b> 1:1 게시판을 통해 요청하시면 <b>120%로 가산되어 적립</b>해
+                                            드립니다.</p>
+                                    </div>
+                                </figcaption>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 
             <div class="quick_menu">
                 <a href="#!" class="kakao"><span class="ico"></span> 카카오톡 문의</a>
                 <a href="#!" class="tel"><span class="ico"></span>전화문의</a>
-            </div>
+            </div> -->
         </div>
 
 
         <footer id="footer">
-            <div class="inner">
-                <h1 class="logo">
-                    <a href="/">삼산휴대폰특판점</a>
-                </h1>
-                <div class="mark">
-                    <img src="img/mark.png" alt="">
+            <div class="foot_top">
+                <div class="inner el_wrap">
+                    <a href="#!">이용약관</a>
+                    <a href="#!">개인정보취급처리방침</a>
+                    <a href="#!">특허증</a>
+                    <a href="#!">이메일 무단수집거부</a>
+                    <a href="#!">서비스소개 </a>
+                    <a href="#!">제휴상담/신청</a>
                 </div>
-                <div class="foot_info">
-                    <address>
-                        <span>울산휴대폰성지 폰혁명 삼산휴대폰특판점</span><br class="only_mo"><small class="web"></small>
-                        <span>울산광역시 남구 삼산중로100번길 20, 1층코너부분(삼산동)</span><small></small>
-                        <span>대표 : 김명국</span><br>
-                        <span>사업자등록번호 : 626-22-01593</span><small class="web"></small><br class="only_mo">
-                        <span>전화번호 : <a href="tel:0507-1360-7248">0507-1360-7248</a></span>
-                    </address>
-                    <p class="copy">Copyright@울산휴대폰성지 폰혁명 삼산휴대폰특판점.All rights reserved.</p>
+            </div>
+            <div class="foot_bottom">
+                <div class="inner">
+                    <div class="foot_info">
+                        <address>
+                            <span>회사명 : 주식회사 비즈품앗이</span> <small></small> <span>대표이사 : 남 윤 오</span> <small
+                                class="web"></small><br class="only_mo">
+                            <span>사업자등록번호 : 110-86-18567</span><br class="only_web"><small class="mo"></small>
+                            <span>통신판매업신고번호 : 노원구 0161호</span> <small class="web"></small><br class="only_mo">
+                            <span>개인정보관리책임자 : 김도은</span><br>
+                            <span>서울특별시 노원구 노해로 508</span> <small class="web"></small><br class="only_mo"> <span>서울시 노원구
+                                한글비석로 396, 108동 지하층
+                                24호(상계동)</span>
+                        </address>
+                        <div class="detail_info">
+                            <p>로또품앗이 특허 등록 번호 : 10-2414282<br class="only_mo">
+                                <span>(인터넷을 이용한 로또 복권 지분 판매 시스템)</span></p>
+
+                            <p>로또품앗이 상표 등록 번호 : 40-1749040 | 40-1585576 | 40-1605301</p>
+
+                            <p>당사의 비즈니스 모델과 상표는 특허청에 등록, 출원되어 무단으로 사용하시면 불이익이 따를 수 있습니다.</p>
+
+                            <p>
+                                당사의 로또품앗이 서비스는 현재 미국 로또 서비스로 개편 중에 있으며,<br>
+                                개편 후에라도 현재 추천인 모집 등의 방법으로 모으신 보너스 적립금을 포함한<br>
+                                모든 적립금을 미국 로또 게임에 그대로 사용하실 수 있습니다
+                            </p>
+
+                            <p>
+                                로또품앗이에 남아있는 구입 적립금과 당첨 적립금은 미국로또 개편 시에<br>
+                                본래의 금액에 20%의 보너스 적립금이 가산되어 적립이 됩니다.<br>
+                                미국로또 개편 시점은 올 가을로 예정되어 있으며 일정은 다시 공지하도록 하겠습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contact_info">
+                        <p class="color_b1">고객만족센터 : <strong>1522-1930</strong></p>
+                        <p class="color_b1">고객만족센터 : <strong>폐지됨</strong></p>
+                        <p class="color_b1">상담시간 10:00 ~ 16:30 / 점심시간 12:00 ~ 13:00</p>
+                        <p class="color_b1">광고제휴문의 : <a href="mailto:lottoten@naver.com"
+                                target="_blank">lottoten@naver.com</a></p>
+                        <p>토요일, 일요일, 공휴일은 휴무입니다.<br>
+                            통화연결이 어려울수있으니 게시판을 통해 문의주시면 신속히 답변 드리겠습니다.<br>
+                            상담시간 외에는 일대일 고객상담 게시판을 이용해 주시기 바랍니다.</p>
+
+                        <a href="#!" class="contact_btn">1:1고객상담 </a>
+                        <a href="#!" class="contact_btn">자주묻는 질문 </a>
+
+                    </div>
+
                 </div>
             </div>
         </footer>
@@ -256,71 +513,11 @@
     </div>
     <script>
         $(window).load(function () {
-            var swiper = new Swiper('.event_slider', {
-                slidesPerView: 1,
-                spaceBetween: 10,
-                pagination: {
-                    el: '.event_slider .swiper-pagination',
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                loop: true,
-            });
-            var swiper = new Swiper('.photo_slider', {
-                slidesPerView: 1.75,
-                spaceBetween: 40,
-                loop: true,
-                centeredSlides: true,
-                pagination: {
-                    el: '.photo_slider .swiper-pagination',
-                },
-                loopedSlides: 2,
-                breakpoints: {
-                    768: {
-                        slidesPerView: 1.2,
-                        spaceBetween: 20,
-                    },
-                }
-            });
-            // swiper
 
+            setTimeout(() => {
+                $('#header').addClass('active');
+            }, 100);
 
-
-            // slick
-            $('.back_slider').slick({
-                initialSlide: 3,
-
-                variableWidth: true,
-                centerMode: true,
-                infinite: true,
-                dots: false,
-                arrows: false,
-                // focusOnSelect: true,
-                touchMove: false,
-                draggable: false,
-                asNavFor: '.front_slider',
-            });
-
-            $('.front_slider').slick({
-                infinite: true,
-                initialSlide: 3,
-
-                fade: true,
-                cssEase: 'linear',
-                dots: false,
-                asNavFor: '.back_slider',
-                arrows: false,
-            });
-            // $('.back_slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
-            //     $(this).find('.slick-slide').css('width', '260px');
-            //     $(this).find('.slick-active').css('width', '320px');
-
-            // });
-            // $('.back_slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-            //     $(this).find('.slick-active').css('width', '320px');
-            // });
             setTimeout(function () {
                 $(".main").addClass("on");
 
@@ -350,7 +547,7 @@
 
         AOS.init({
             duration: 500,
-            easing: 'ease-in-out',
+            // easing: 'ease-in-sine',
             offset: 100,
         });
 
@@ -384,6 +581,7 @@
         function scrollAni() {
             $('a[href^="#link"').on('click', function () {
                 let href = $(this).attr('href');
+                // let headerH = $('#header').outerHeight();
                 let hrefTop = $(href).offset().top;
 
                 $('body, html').animate({
@@ -394,6 +592,13 @@
 
             })
         }
+        if($(window).width() < 851){
+    $('.sect06 .img01').attr('data-aos', 'fade-down');
+    $('.sect06 .img02').attr('data-aos', 'fade-up');
+    $('.sect05 *').attr('data-aos-delay','0');
+    $('.sect07 *').attr('data-aos-delay','0');
+
+}
     </script>
 </body>
 
