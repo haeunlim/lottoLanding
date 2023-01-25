@@ -8,7 +8,7 @@
     transition: all 0.3s;
     background-color: transparent;
     color: #fff;
-    @include bgCustom('../img/header_bg.png', no-repeat, top -110px center);
+    @include bgCustom('../img/header_bg.png', no-repeat, top -110px center, 100% 100%);
     transition: background .5s;
     height: 100px;
 
@@ -36,8 +36,10 @@
     @include flexVal(flex, space-between, center);
 
     li {
-        margin-left: 2.6041vw;
+        &+li{
+            margin-left:50px;
 
+        }
         a {
             @extend %gnb-txt;
             font-weight: $fw-medium;
@@ -83,8 +85,8 @@
 .all_menu_wrap {
     @include positionCustom(0, 0, 0, 0);
     width: 100%;
-    height: calc(100vh - 4rem);
-    top: 4rem;
+    height: calc(100vh - 3.666rem);
+    top: 3.666rem;
     background-color: #fff;
     transition: all .3s;
     overflow: hidden;
@@ -94,7 +96,7 @@
 
     .all_menu {
         height: 100%;
-        max-height: calc(100vh - 4rem);
+        max-height: calc(100vh - 3.666rem);
         overflow-y: auto;
     }
 }
@@ -172,11 +174,12 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9676ff",endCo
 
 
         li {
-            margin-left: 0;
             text-align: center;
-
+            
             &+li {
+                margin-left: 0;
                 margin-top: 3vh;
+            
             }
 
             a {

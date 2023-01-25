@@ -49,7 +49,7 @@ h2 {
 }
 
 .motion_box {
-    position: relative;
+    position: relative; 
 }
 
 .motion_img {
@@ -85,6 +85,7 @@ h2 {
 .btn_wrap {
     @include flexVal();
     position: relative;
+    margin-top: 2rem;
 
     a,
     button {
@@ -199,7 +200,7 @@ h2 {
 .main {
     @include bgCustom('../img/main_bg.jpg', no-repeat, center bottom);
     // height: 1034px;
-    padding: 148px 0 546px;
+    padding: 7.7083vw 0 28.4375vw;
 
     .inner {
         position: relative;
@@ -279,8 +280,8 @@ h2 {
 
 
 
-// sect01 start
-.sect01 {
+// accumulated_money start
+.accumulated_money {
 
     .cont {
         .info {
@@ -399,6 +400,12 @@ h2 {
         img{
             margin: 0 auto;
         }
+
+        .btn_wrap{
+            position: relative;
+            z-index: 50;
+        }
+
     }
 
 
@@ -517,7 +524,7 @@ h2 {
     }
 }
 
-.sect05 {
+.provide_money {
     .text_box {
         margin-top: 40px;
     }
@@ -549,6 +556,7 @@ h2 {
 
             .img03 {
                 position: relative;
+                display: block;
             }
         }
     }
@@ -685,8 +693,8 @@ h2 {
 
     }
 
-    // sect01 start
-    .sect01 {
+    // accumulated_money start
+    .accumulated_money {
 
         .cont {
             .info {
@@ -874,7 +882,7 @@ h2 {
         }
     }
 
-    .sect05 {
+    .provide_money {
         .text_box {
             margin-top: 1.333rem;
         }

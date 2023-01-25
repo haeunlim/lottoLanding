@@ -30,10 +30,11 @@
                 line-height: 1.5714;
 
                 .detail_info {
+                    margin-top: 1rem;
                     color: var(--bs-gray-500);
 
-                    p {
-                        margin-top: 20px;
+                    p:last-of-type {
+                       margin-top: 1rem;
                     }
                 }
             }
@@ -150,14 +151,18 @@
 
                 .foot_info {
                     .detail_info {
-                        p {
-                            margin-top: 1.4rem;
-                            position: relative;
+                        margin-top: 1.4rem;
 
-                            span {
-                                padding-left: 11em;
-                                position: absolute;
+                        p:first-of-type{
+                            display: flex;
+                            span:first-of-type{
+                                flex-shrink: 0;
                             }
+                        }
+                      
+                        p:last-of-type{
+                            margin-top: 1.4rem;
+                            
                         }
                     }
                 }

@@ -1,11 +1,12 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
 html {
   font-size: 20px; }
 
 .main .inner .ttl_box h2 {
   font-size: 4.2rem; }
 
-.sect01 .cont .info figcaption .ttl_box h2 {
+.accumulated_money .cont .info figcaption .ttl_box h2 {
   font-size: 1.3rem; }
 
 .main .inner .ttl_box p {
@@ -129,7 +130,7 @@ body {
     font-size: 3.666rem; }
   .main .inner .ttl_box p {
     font-size: 1rem; }
-  .sect01 .cont .info figcaption .ttl_box h2 {
+  .accumulated_money .cont .info figcaption .ttl_box h2 {
     font-size: 0.9333rem; }
   .ttl_box h2 {
     font-size: 2.3333rem; }
@@ -222,86 +223,110 @@ body {
   --bs-body-bg: #fff;
   --bs-border-color: #dbdbdb; }
 
+/* 노토산스 */
 @font-face {
   font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 800;
-  src: url(../fonts/NotoSansKR-Black.otf) format("otf"); }
+  font-weight: 350;
+  src: url(./fonts/notokr-demilight.eot);
+  src: local("notokr-demilight"), url(./fonts/notokr-demilight.eot?#iefix) format("embedded-opentype"), url(./fonts/notokr-demilight.woff) format("woff"), url(./fonts/notokr-demilight.woff2) format("woff2"), url(./fonts/notokr-demilight.ttf) format("truetype"); }
 
 @font-face {
   font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 600;
-  src: url(../fonts/NotoSansKR-Bold.otf) format("otf"); }
-
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 500;
-  src: url(../fonts/NotoSansKR-Medium.otf) format("otf"); }
-
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
   font-weight: 400;
-  src: url(../fonts/NotoSansKR-Regular.otf) format("otf"); }
+  src: url(./fonts/notokr-regular.eot);
+  src: local("notokr-regular"), url(./fonts/notokr-regular.eot?#iefix) format("embedded-opentype"), url(./fonts/notokr-regular.woff) format("woff"), url(./fonts/notokr-regular.woff2) format("woff2"), url(./fonts/notokr-regular.ttf) format("truetype"); }
 
 @font-face {
   font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 300;
-  src: url(../fonts/NotoSansKR-Light.otf) format("otf"); }
-
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 100;
-  src: url(../fonts/NotoSansKR-Thin.otf) format("otf"); }
-
-/* G마켓산스 */
-@font-face {
-  font-family: 'Gmarket Sans';
-  font-style: normal;
-  font-weight: 300;
-  src: url(../fonts/GmarketSansLight.woff) format("woff"); }
-
-@font-face {
-  font-family: 'Gmarket Sans';
-  font-style: normal;
   font-weight: 500;
-  src: url(../fonts/GmarketSansMedium.woff) format("woff"); }
+  src: url(./fonts/notokr-medium.eot);
+  src: local("notokr-medium"), url(./fonts/notokr-medium.eot?#iefix) format("embedded-opentype"), url(./fonts/notokr-medium.woff) format("woff"), url(./fonts/notokr-medium.woff2) format("woff2"), url(./fonts/notokr-medium.ttf) format("truetype"); }
 
 @font-face {
-  font-family: 'Gmarket Sans';
-  font-style: normal;
+  font-family: 'Noto Sans KR';
   font-weight: 700;
-  src: url(../fonts/GmarketSansBold.woff) format("woff"); }
+  src: url(./fonts/notokr-bold.eot);
+  src: local("notokr-bold"), url(./fonts/notokr-bold.eot?#iefix) format("embedded-opentype"), url(./fonts/notokr-bold.woff) format("woff"), url(./fonts/notokr-bold.woff2) format("woff2"), url(./fonts/notokr-bold.ttf) format("truetype"); }
+
+/* 라토 */
+@font-face {
+  font-family: 'Lato';
+  font-weight: 300;
+  src: url(./fonts/Lato-Light.eot);
+  src: local("Lato-Light"), url(./fonts/Lato-Light.eot?#iefix) format("embedded-opentype"), url(./fonts/Lato-Light.woff) format("woff"), url(./fonts/Lato-Light.woff2) format("woff2"), url(./fonts/Lato-Light.ttf) format("truetype"); }
+
+@font-face {
+  font-family: 'Lato';
+  font-weight: 400;
+  src: url(./fonts/Lato-Regular.eot);
+  src: local("Lato-Regular"), url(./fonts/Lato-Regular.eot?#iefix) format("embedded-opentype"), url(./fonts/Lato-Regular.woff) format("woff"), url(./fonts/Lato-Regular.woff2) format("woff2"), url(./fonts/Lato-Regular.ttf) format("truetype"); }
+
+@font-face {
+  font-family: 'Lato';
+  font-weight: 700;
+  src: url(./fonts/Lato-Bold.eot);
+  src: local("Lato-Bold"), url(./fonts/Lato-Bold.eot?#iefix) format("embedded-opentype"), url(./fonts/Lato-Bold.woff) format("woff"), url(./fonts/Lato-Bold.woff2) format("woff2"), url(./fonts/Lato-Bold.ttf) format("truetype"); }
 
 /* 나눔스퀘어 */
 @font-face {
   font-family: 'NanumSquare';
-  font-style: lighter;
   font-weight: 300;
-  src: url(../fonts/NanumSquareL.ttf) format("ttf"); }
+  src: url(./fonts/NanumSquareL.woff) format("woff"); }
 
 @font-face {
   font-family: 'NanumSquare';
-  font-style: normal;
   font-weight: 400;
-  src: url(../fonts/NanumSquareR.ttf) format("ttf"); }
+  src: url(./fonts/NanumSquareR.woff) format("woff"); }
 
 @font-face {
   font-family: 'NanumSquare';
+  font-weight: 700;
+  src: url(./fonts/NanumSquareB.woff) format("woff"); }
+
+@font-face {
+  font-family: 'NanumSquare';
+  font-weight: 800;
+  src: url(./fonts/NanumSquareEB.woff) format("woff"); }
+
+/* @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css'); */
+/* 지마켓 */
+@font-face {
+  font-family: 'Gmarket Sans';
   font-style: normal;
   font-weight: 700;
-  src: url(../fonts/NanumSquareB.ttf) format("ttf"); }
+  src: local("Gmarket Sans Bold"), local("GmarketSans-Bold"), url("http://script.ebay.co.kr/fonts/GmarketSansBold.woff2") format("woff2"), url("http://script.ebay.co.kr/fonts/GmarketSansBold.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
 
 @font-face {
-  font-family: 'NanumSquare';
+  font-family: 'Gmarket Sans';
   font-style: normal;
-  font-weight: 800;
-  src: url(../fonts/NanumSquareEB.ttf) format("ttf"); }
+  font-weight: 500;
+  src: local("Gmarket Sans Medium"), local("GmarketSans-Medium"), url("http://script.ebay.co.kr/fonts/GmarketSansMedium.woff2") format("woff2"), url("http://script.ebay.co.kr/fonts/GmarketSansMedium.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
 
+@font-face {
+  font-family: 'Gmarket Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Gmarket Sans Light"), local("GmarketSans-Light"), url("http://script.ebay.co.kr/fonts/GmarketSansLight.woff2") format("woff2"), url("http://script.ebay.co.kr/fonts/GmarketSansLight.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* 경기천년바탕체 */
+@font-face {
+  font-family: 'GyeonggiBatang';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+/* 경기천년제목체 */
+@font-face {
+  font-family: 'GyeonggiTitleM';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiTitleM.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+/* font-family: 'Noto Sans KR', sans-serif */
+/* 나눔고딕 */
 @font-face {
   font-family: 'Jalnan';
   font-weight: normal;
@@ -320,10 +345,11 @@ body {
 *::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-size: inherit;
-  font-family: inherit;
   margin: 0;
   padding: 0; }
+
+br {
+  font-family: sans-serif; }
 
 html {
   -webkit-text-size-adjust: 100%;
@@ -430,7 +456,7 @@ audio,
 video {
   border: 0;
   color: inherit;
-  font-family: inherit;
+  font-family: var(--bs-body-font-family);
   letter-spacing: inherit;
   letter-spacing: -0.04em; }
 
@@ -489,11 +515,13 @@ strong {
 mark {
   background-color: var(--bs-highlight-bg); }
 
-a,
+a {
+  color: inherit;
+  text-decoration: none; }
+
 a:hover,
 a:focus,
 a:active {
-  color: inherit;
   text-decoration: none; }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -522,7 +550,6 @@ button {
   border-radius: 0;
   outline: 0;
   color: inherit;
-  font-family: inherit;
   cursor: pointer; }
 
 button:focus:not(:focus-visible) {
@@ -536,7 +563,7 @@ textarea {
   border: 1px solid var(--bs-border-color);
   padding: var(--bs-input-padding);
   font-size: inherit;
-  font-family: inherit;
+  font-family: var(--bs-body-font-family);
   -webkit-appearance: none;
   -webkit-border-radius: 0;
   border-radius: 0;
@@ -595,6 +622,8 @@ progress {
   max-width: 1250px;
   position: relative;
   margin: 0 auto;
+  width: -webkit-calc(100% - 2.14285rem);
+  width: -moz-calc(100% - 2.14285rem);
   width: calc(100% - 2.14285rem); }
 
 .inner_1305 {
@@ -602,73 +631,6 @@ progress {
 
 .inner_1200 {
   max-width: 1200px; }
-
-.item_list {
-  display: -webkit-box;
-  display: -moz-box;
-  display: flex;
-  display: -ms-flexbox;
-  justify-content: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: calc(100% + 20px);
-  margin-left: -10px;
-  margin-top: -40px; }
-  .item_list li {
-    width: calc(25% - 20px);
-    margin: 40px 10px 0 10px; }
-    .item_list li figure {
-      overflow: hidden;
-      border-radius: 5px; }
-    .item_list li img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; }
-    .item_list li .info_box {
-      margin-top: 20px;
-      font-size: 15px; }
-      .item_list li .info_box .com_name {
-        color: #999999;
-        margin-bottom: 12px; }
-      .item_list li .info_box .subj {
-        font-size: 18px;
-        line-height: 1.333;
-        height: 2.666em;
-        width: 100%;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        margin-bottom: 20px; }
-      .item_list li .info_box .category {
-        display: inline-block;
-        text-align: center;
-        border-radius: 3px;
-        padding: 0 8px;
-        line-height: 26px;
-        border: 1px solid #ed5669; }
-        .item_list li .info_box .category.beauty {
-          border-color: #ed5669;
-          color: #ed5669; }
-        .item_list li .info_box .category.hospital {
-          border-color: #ff8a00;
-          color: #ff8a00; }
-        .item_list li .info_box .category.relevant {
-          border-color: #3762ff;
-          color: #3762ff; }
-        .item_list li .info_box .category.education {
-          border-color: #8f65fc;
-          color: #8f65fc; }
-        .item_list li .info_box .category.cafe {
-          border-color: #2ace92;
-          color: #2ace92; }
 
 small.web {
   display: inline-block !important; }
@@ -1460,10 +1422,21 @@ input[type="tel"]:focus {
 
 [class*="flex"].col_2 {
   flex-wrap: wrap;
+  width: -webkit-calc(100% + (var(--mg-x) * 2));
+  /* for Chrome, Safari */
+  width: -moz-calc(100% + (var(--mg-x) * 2));
+  /* for Firefox */
   width: calc(100% + (var(--mg-x) * 2));
+  /* for IE */
+  margin-left: -webkit-calc(-1 * var(--mg-x));
+  margin-left: -moz-calc(-1 * var(--mg-x));
   margin-left: calc(-1 * var(--mg-x));
+  margin-top: -webkit-calc(-1 * var(--mg-top));
+  margin-top: -moz-calc(-1 * var(--mg-top));
   margin-top: calc(-1 * var(--mg-top)); }
   [class*="flex"].col_2 > * {
+    width: -webkit-calc(50% - (var(--mg-x) * 2));
+    width: -moz-calc(50% - (var(--mg-x) * 2));
     width: calc(50% - (var(--mg-x) * 2));
     margin: var(--mg-top) var(--mg-x) 0; }
 
@@ -1472,10 +1445,18 @@ input[type="tel"]:focus {
 
 [class*="flex"].col_3 {
   flex-wrap: wrap;
+  width: -webkit-calc(100% + (var(--mg-x) * 2));
+  width: -moz-calc(100% + (var(--mg-x) * 2));
   width: calc(100% + (var(--mg-x) * 2));
+  margin-left: -webkit-calc(-1 * var(--mg-x));
+  margin-left: -moz-calc(-1 * var(--mg-x));
   margin-left: calc(-1 * var(--mg-x));
+  margin-top: -webkit-calc(-1 * var(--mg-top));
+  margin-top: -moz-calc(-1 * var(--mg-top));
   margin-top: calc(-1 * var(--mg-top)); }
   [class*="flex"].col_3 > * {
+    width: -webkit-calc(33.333% - (var(--mg-x) * 2));
+    width: -moz-calc(33.333% - (var(--mg-x) * 2));
     width: calc(33.333% - (var(--mg-x) * 2));
     margin: var(--mg-top) var(--mg-x) 0; }
 
@@ -1491,6 +1472,8 @@ input[type="tel"]:focus {
   .checkbox1 input[type="checkbox"] + label {
     position: relative;
     display: inline-block;
+    padding-left: -webkit-calc(20px + 10px);
+    padding-left: -moz-calc(20px + 10px);
     padding-left: calc(20px + 10px);
     line-height: 20px;
     vertical-align: middle; }
@@ -1516,6 +1499,8 @@ input[type="tel"]:focus {
   .chk_box input[type="checkbox"] + label {
     position: relative;
     display: inline-block;
+    padding-left: -webkit-calc(20px + 10px);
+    padding-left: -moz-calc(20px + 10px);
     padding-left: calc(20px + 10px);
     line-height: 20px;
     vertical-align: middle;
@@ -1546,6 +1531,8 @@ input[type="tel"]:focus {
     vertical-align: middle;
     position: relative;
     display: inline-block;
+    padding-left: -webkit-calc(16px + 10px);
+    padding-left: -moz-calcalc(16px + 10px);
     padding-left: calc(16px + 10px);
     line-height: 16px;
     cursor: pointer; }
@@ -1575,6 +1562,8 @@ input[type="tel"]:focus {
   .radiobox2 input[type="radio"] + label {
     position: relative;
     display: inline-block;
+    padding-left: -webkit-calc(16px + 10px);
+    padding-left: -moz-calc(16px + 10px);
     padding-left: calc(16px + 10px);
     line-height: 16px;
     cursor: pointer; }
@@ -1745,9 +1734,11 @@ small.mo {
   [class*="flex"].mo_col_1 {
     width: 100%;
     margin-left: 0;
+    margin-top: -webkit-calc(-1 * var(--mo-mg-top));
+    margin-top: -moz-calc(-1 * var(--mo-mg-top));
     margin-top: calc(-1 * var(--mo-mg-top)); }
     [class*="flex"].mo_col_1 > * {
-      width: 100%;
+      width: 100% !important;
       margin: var(--mo-mg-top) 0 0; }
   .mo_block_100 {
     display: block; }
@@ -1758,6 +1749,18 @@ small.mo {
       margin-left: 0 !important;
       margin-top: var(--mo-mg-top); } }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .sect02 .inner > div {
+    --mo-mg-top: 5.55vw; }
+  .sect06 .inner > div {
+    --mo-mg-top:2.2rem; }
+  .provide_money ul li {
+    --mo-mg-top: 2rem; }
+  .sect07 ul li {
+    --mg-x: 20px;
+    --mg-top: 50px;
+    --mo-mg-top: 2rem; } }
+
 #header {
   position: fixed;
   top: 0;
@@ -1767,7 +1770,7 @@ small.mo {
   transition: all 0.3s;
   background-color: transparent;
   color: #fff;
-  background: url("../img/header_bg.png") no-repeat top -110px center/cover;
+  background: url("../img/header_bg.png") no-repeat top -110px center/100% 100%;
   transition: background .5s;
   height: 100px; }
   #header .inner {
@@ -1796,12 +1799,12 @@ small.mo {
   -moz-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap; }
-  .gnb_list li {
-    margin-left: 2.6041vw; }
-    .gnb_list li a {
-      font-weight: 500;
-      display: block;
-      padding: 10px 0; }
+  .gnb_list li + li {
+    margin-left: 50px; }
+  .gnb_list li a {
+    font-weight: 500;
+    display: block;
+    padding: 10px 0; }
 
 .quick_menu {
   position: fixed;
@@ -1830,8 +1833,8 @@ small.mo {
   left: 0;
   transform: translate(0, 0);
   width: 100%;
-  height: calc(100vh - 4rem);
-  top: 4rem;
+  height: calc(100vh - 3.666rem);
+  top: 3.666rem;
   background-color: #fff;
   transition: all .3s;
   overflow: hidden;
@@ -1839,7 +1842,7 @@ small.mo {
   opacity: 0; }
   .all_menu_wrap .all_menu {
     height: 100%;
-    max-height: calc(100vh - 4rem);
+    max-height: calc(100vh - 3.666rem);
     overflow-y: auto; }
 
 .ham {
@@ -1888,9 +1891,9 @@ small.mo {
     justify-content: center;
     height: 100%; }
     .gnb_list li {
-      margin-left: 0;
       text-align: center; }
       .gnb_list li + li {
+        margin-left: 0;
         margin-top: 3vh; }
       .gnb_list li a {
         color: #252525;
@@ -1934,9 +1937,10 @@ small.mo {
       #footer .foot_bottom .inner .foot_info {
         line-height: 1.5714; }
         #footer .foot_bottom .inner .foot_info .detail_info {
+          margin-top: 1rem;
           color: var(--bs-gray-500); }
-          #footer .foot_bottom .inner .foot_info .detail_info p {
-            margin-top: 20px; }
+          #footer .foot_bottom .inner .foot_info .detail_info p:last-of-type {
+            margin-top: 1rem; }
       #footer .foot_bottom .inner .contact_info p strong {
         font-weight: bolder;
         font-size: 20px; }
@@ -2003,12 +2007,14 @@ small.mo {
       padding: 2.6666rem 0 0; }
       #footer .foot_bottom .inner {
         display: block; }
-        #footer .foot_bottom .inner .foot_info .detail_info p {
-          margin-top: 1.4rem;
-          position: relative; }
-          #footer .foot_bottom .inner .foot_info .detail_info p span {
-            padding-left: 11em;
-            position: absolute; }
+        #footer .foot_bottom .inner .foot_info .detail_info {
+          margin-top: 1.4rem; }
+          #footer .foot_bottom .inner .foot_info .detail_info p:first-of-type {
+            display: flex; }
+            #footer .foot_bottom .inner .foot_info .detail_info p:first-of-type span:first-of-type {
+              flex-shrink: 0; }
+          #footer .foot_bottom .inner .foot_info .detail_info p:last-of-type {
+            margin-top: 1.4rem; }
         #footer .foot_bottom .inner .contact_info {
           margin-top: 2rem; }
           #footer .foot_bottom .inner .contact_info p {
@@ -2119,7 +2125,8 @@ h2 {
   -moz-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  position: relative; }
+  position: relative;
+  margin-top: 2rem; }
   .btn_wrap .white {
     color: #3f1bd1;
     background-color: #fff; }
@@ -2195,7 +2202,7 @@ h2 {
 
 .main {
   background: url("../img/main_bg.jpg") no-repeat center bottom/cover;
-  padding: 148px 0 546px; }
+  padding: 7.7083vw 0 28.4375vw; }
   .main .inner {
     position: relative;
     max-width: 1050px; }
@@ -2238,7 +2245,7 @@ h2 {
   opacity: 1;
   transform: translateY(0); }
 
-.sect01 .cont .info {
+.accumulated_money .cont .info {
   display: -webkit-box;
   display: -moz-box;
   display: flex;
@@ -2255,50 +2262,50 @@ h2 {
   box-shadow: 0 7px 40px rgba(0, 0, 0, 0.13);
   border-radius: 1rem;
   background-color: #cdbbee; }
-  .sect01 .cont .info figure {
+  .accumulated_money .cont .info figure {
     background-color: #cdbbee;
     width: 49.8541vw;
     max-width: 650px;
     height: 100%;
     flex-shrink: 0;
     border-radius: 1rem 0 0 1rem; }
-    .sect01 .cont .info figure .ico_01 {
+    .accumulated_money .cont .info figure .ico_01 {
       width: 16.153%;
       top: -8.3076%;
       left: 3.846%; }
-    .sect01 .cont .info figure .ico_02 {
+    .accumulated_money .cont .info figure .ico_02 {
       width: 13.23%;
       top: 27.23%;
       left: 7.23%; }
-    .sect01 .cont .info figure .ico_03 {
+    .accumulated_money .cont .info figure .ico_03 {
       left: auto;
       width: 15.538%;
       right: 2.307%;
       top: 8.615%; }
-    .sect01 .cont .info figure .card {
+    .accumulated_money .cont .info figure .card {
       width: 41.0769%;
       left: 41.538%;
       top: 19.384%; }
-    .sect01 .cont .info figure > img {
+    .accumulated_money .cont .info figure > img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       margin-top: -4.615%;
       border-radius: 1rem 0 0 1rem; }
-  .sect01 .cont .info figcaption {
+  .accumulated_money .cont .info figcaption {
     display: flex;
     align-items: center;
     padding: 0 3.6458vw;
     background-color: #fff;
     border-radius: 0 1rem 1rem 0; }
-    .sect01 .cont .info figcaption .ttl_box .top_txt {
+    .accumulated_money .cont .info figcaption .ttl_box .top_txt {
       color: #525dc2; }
-    .sect01 .cont .info figcaption .ttl_box h2 {
+    .accumulated_money .cont .info figcaption .ttl_box h2 {
       font-family: "Noto Sans KR", sans-serif; }
-    .sect01 .cont .info figcaption .ttl_box p {
+    .accumulated_money .cont .info figcaption .ttl_box p {
       margin-top: 30px; }
 
-.sect01 .cont .btn_wrap {
+.accumulated_money .cont .btn_wrap {
   margin-top: 40px; }
 
 .sect02 {
@@ -2317,6 +2324,9 @@ h2 {
     text-align: center; }
     .sect03 .cont img {
       margin: 0 auto; }
+    .sect03 .cont .btn_wrap {
+      position: relative;
+      z-index: 50; }
 
 .sect04 {
   background-color: #f7f8f9; }
@@ -2427,7 +2437,7 @@ h2 {
       right: 20px;
       top: -10px; }
 
-.sect05 .text_box {
+.provide_money .text_box {
   margin-top: 40px; }
 
 .sect06 {
@@ -2447,7 +2457,8 @@ h2 {
         right: 0;
         width: 50.697%; }
       .sect06 .cont .motion_box .img03 {
-        position: relative; }
+        position: relative;
+        display: block; }
 
 .sect07 .cont li figure {
   border-radius: 20px;
@@ -2513,43 +2524,43 @@ h2 {
         height: 2.2333rem;
         line-height: 2.2333rem;
         margin-bottom: 1.625em; }
-  .sect01 .cont .info {
+  .accumulated_money .cont .info {
     display: block;
     box-shadow: 0 0.233rem 1.333rem rgba(0, 0, 0, 0.13);
     border-radius: 0.666rem; }
-    .sect01 .cont .info figure {
+    .accumulated_money .cont .info figure {
       width: 100%;
       height: 17.4333rem;
       border-radius: 0.666rem 0.666rem 0 0; }
-      .sect01 .cont .info figure .ico_01 {
+      .accumulated_money .cont .info figure .ico_01 {
         top: -1.8rem;
         width: 5.5rem;
         left: -0.4666rem; }
-      .sect01 .cont .info figure .ico_02 {
+      .accumulated_money .cont .info figure .ico_02 {
         top: 6.333rem;
         left: 0.266rem;
         width: 5rem; }
-      .sect01 .cont .info figure .ico_03 {
+      .accumulated_money .cont .info figure .ico_03 {
         right: 0.7333rem;
         top: 1.866rem;
         width: 4.8rem; }
-      .sect01 .cont .info figure .card {
+      .accumulated_money .cont .info figure .card {
         left: 8.333rem;
         top: 6.066rem;
         width: 9.9333rem; }
-      .sect01 .cont .info figure > img {
+      .accumulated_money .cont .info figure > img {
         width: 100%;
         margin-top: 0;
         border-radius: inherit; }
-    .sect01 .cont .info figcaption {
+    .accumulated_money .cont .info figcaption {
       display: block;
       padding: 2.333rem 1.666rem;
       border-radius: 0 0 0.666rem 0.666rem; }
-      .sect01 .cont .info figcaption .ttl_box h2 {
+      .accumulated_money .cont .info figcaption .ttl_box h2 {
         font-size: 1.2rem; }
-      .sect01 .cont .info figcaption .ttl_box p {
+      .accumulated_money .cont .info figcaption .ttl_box p {
         margin-top: .9rem; }
-  .sect01 .cont .btn_wrap {
+  .accumulated_money .cont .btn_wrap {
     margin-top: 2rem; }
   .sect02 .inner {
     padding-left: 0; }
@@ -2613,9 +2624,9 @@ h2 {
       right: 1.333rem;
       top: -0.6666rem;
       width: 1.5rem; }
-  .sect05 .text_box {
+  .provide_money .text_box {
     margin-top: 1.333rem; }
-  .sect05 figure {
+  .provide_money figure {
     width: 10rem;
     margin: 0 auto; }
   .sect06 {

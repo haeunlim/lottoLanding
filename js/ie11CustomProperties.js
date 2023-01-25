@@ -389,7 +389,8 @@
 				if (item.pseudo) {
 					css += item.selector + '.iecp-u' + el.ieCP_unique + item.pseudo + '{' + prop + ':' + value + '}\n';
 				} else {
-					el.runtimeStyle[prop] = value;  // new
+					el.runtimeStyle[prop] = value;  
+					// new
 				}
 			}
 		}
